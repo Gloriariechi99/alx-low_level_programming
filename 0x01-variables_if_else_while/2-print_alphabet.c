@@ -1,18 +1,14 @@
 /**
 * main - main function
-* Return: Always 0
+* Return: 0
 */
 #include <stdio.h>
-
 int main(void)
 {
-	char lower_UpperCase;
+	char lowerCase;
 
-	for (lower_UpperCase = 'a'; lower_UpperCase <= 'z'; lower_UpperCase++)
-		putchar(lower_UpperCase);
-
-	for (lower_UpperCase = 'A'; lower_UpperCase <= 'Z'; lower_UpperCase++)
-		putchar(lower_UpperCase);
+	for (lowerCase = 'a'; lowerCase <= 'z'; lowerCase++)
+		putchar(lowerCase);
 
 	putchar('\n');
 
