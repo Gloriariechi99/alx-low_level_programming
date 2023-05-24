@@ -1,7 +1,7 @@
 /**
- * void jack_bauer(void) - prints every minute of the day of
+ * @jack_bauer - prints every minute of the day of
  * jack bauer starting from 00:00 to 23:59
- * Rettun: void
+ * Return: void
  */
 #include "main.h"
 void jack_bauer(void)
