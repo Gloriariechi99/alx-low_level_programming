@@ -19,6 +19,7 @@ int main(void)
 		}
 
 		fib = first_term + second_term;
+		first_term = second_term;
 		second_term = fib;
 	}
 	printf("%d\n", sum);
