@@ -6,16 +6,22 @@
 #include <stdio.h>
 int main(void)
 {
-	int below = 1024;
+	int sum3 = 0;
 	int sum = 0;
+	int sum5 = 0;
+	int i;
 
-	for (int i = 0; i < 1024; i++)
+	for (i = 0; i < 1024; ++i)
 	{
-		if (i % 3 == 0 || i % 5 == 0)
+		if ((i % 3) == 0)
 		{
-
-			sum = sum + i;
+			sum3 = sum3 + i;
 		}
+		if ((i % 5) == 0)
+		{
+			sum5 = sum5 + i;
+		}
+		sum = sum3 + sum5;
 	}
 	printf("The sum is %d\n", sum);
 
