@@ -23,7 +23,7 @@ int main(void)
 		}
 		sum = sum3 + sum5;
 	}
-	printf("The sum is %d\n", sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
