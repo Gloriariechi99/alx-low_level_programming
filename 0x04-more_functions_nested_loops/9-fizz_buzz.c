@@ -12,7 +12,6 @@ int main(void)
 		if ((num % 3) == 0 && (num % 5) != 0)
 		{
 			printf(" Fizz");
-			printf(" ");
 		}
 		else if ((num % 5) == 0 && (num % 3) != 0)
 		{
