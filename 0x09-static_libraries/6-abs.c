@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 /**
 * _abs - prints the absolute value of a number
 *@i: number targeted

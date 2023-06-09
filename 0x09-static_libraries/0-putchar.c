@@ -3,8 +3,9 @@
  * @c: The character to be printed
  * Return: 1 if success, -1 on error
  */
-#include "main.h"
+#include <unistd.h>
+#include <stdio.h>
 int _putchar(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
