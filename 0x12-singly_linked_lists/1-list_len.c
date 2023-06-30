@@ -3,6 +3,7 @@
  * @h: pointer
  * Return: number of elements in the linked list
  */
+#include "lists.h"
 size_t list_len(const list_t *h)
 {
 	size_t number = 0;
