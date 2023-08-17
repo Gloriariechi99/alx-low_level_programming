@@ -1,62 +1,21 @@
 #include "lists.h"
 
 /**
- * dlistint_len - returns the number of elements in a linked dlistint_t list
+ * sum_dlistint - returns the sum of all the data of a dlistint_t linked list
  *
- * @h: the head pointer to the list
+ * @head: the head of the doubly linked list
  *
- * Return: number of elements in the list
+ * Return: the summ of all the data
  */
 
-size_t dlistint_len(const dlistint_t *h)
+int sum_dlistint(dlistint_t *head)
 {
-	size_t count = 0;
+	int sum = 0;
 
-	while (h)
+	while (head)
 	{
-		count++;
-		h = h->next;
+		sum += head->n;
+		head = head->next;
 	}
-	return (count);
-}
-
-/**
- * insert_dnodeint_at_index - inserts a new node at a given position
- *
- * @h: a pointer to the head of the doubly linked list
- * @idx: the index to add the node
- * @n: the value of the node
- *
- * Return: the new pointer
- */
-
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
-{
-	unsigned int len = dlistint_len(*h);
-	dlistint_t *new = NULL, *tmp = *h;
-
-	if (h)
-	{
-		if (idx > len)
-			return (NULL);
-		if (idx == 0)
-			return (add_dnodeint(h, n));
-		if (idx == len)
-			return (add_dnodeint_end(h, n));
-
-		new = malloc(sizeof(dlistint_t));
-		new->n = n;
-		if (new)
-		{
-			while (idx--)
-			{
-				tmp = tmp->next;
-			}
-			new->prev = tmp->prev;
-			new->next = tmp;
-			tmp->prev->next = new;
-			tmp->prev = new;
-		}
-	}
-	return (new);
+	return (sum);
 }
